@@ -1,0 +1,9 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.pyc
+
+chrome-data/
+input/
+
+*.log
+scripts/tradingview/debug.log
