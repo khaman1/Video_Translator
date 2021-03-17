@@ -4,13 +4,15 @@ from library.video.video import Video
 
 subtitle = Video(
     fps=24,
-    video_name='video 5',
-    stop_at_frame=6,
-    lang='chi_sim_new',
+    video_name='video2',
+    x1=950,
+    lang='chi_sim',
     )
 
 
-subtitle.preview()
-subtitle = subtitle.extract_subtitle()
+#subtitle.preview()
 
+
+
+subtitle = subtitle.extract_subtitle()
 subtitle.generate_version2()
