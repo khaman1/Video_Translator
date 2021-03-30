@@ -2,6 +2,11 @@ from ..image.image import Image
 import cv2
 import codecs
 from math import floor
+from difflib import SequenceMatcher
+
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
 
 class Video:
     unique_list=[]
@@ -60,7 +65,9 @@ class Video:
             current_string, original_string = Image(img=img).toChinese_version2()
 
             
-            if previous_string != current_string:# and original_string not in self.unique_list:
+            if previous_string != current_string and \
+               similar(previous_string, current_string) < 0.88:# and original_string not in self.unique_list:
+
                 previous_string = current_string
 
                 self.output.append({
@@ -109,5 +116,6 @@ class Video:
                 
                 f.write(
                     str(i) + ' \n' +
-                    item['original_text'] + '\n' +
-                    item['text'] + '\n\n')
+                    item['original_text'] + #'\n' +
+                    #item['text'] + 
+                    '\n\n')
