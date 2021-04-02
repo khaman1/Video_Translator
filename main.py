@@ -4,9 +4,9 @@ from library.video.video import Video
 
 subtitle = Video(
     fps=48,
-    video_name='video3',
+    video_name='video4',
     x1=950,
-    #stop_at_frame=6,
+    #stop_at_frame=10,
     lang='chi_sim',
     )
 

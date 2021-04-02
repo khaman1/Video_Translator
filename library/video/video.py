@@ -61,8 +61,8 @@ class Video:
                 print("ERROR!!!")
                 break
 
-            #current_string, original_string = Image(img=img).toString(lang_src=self.lang)
-            current_string, original_string = Image(img=img).toChinese_version2()
+            current_string, original_string = Image(img=img).toString(lang_src=self.lang)
+            #current_string, original_string = Image(img=img).toChinese_version2()
 
             
             if previous_string != current_string and \
