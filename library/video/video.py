@@ -109,13 +109,13 @@ class Video:
                     item['text'] + '\n\n')
 
     def generate_version2(self, url=''):
-        with codecs.open('output/'+self.video_name+'.srt','w','utf-8') as f:
+        with codecs.open('output/'+self.video_name+'.txt','w','utf-8') as f:
             i=0
             for item in self.output:
                 i+=1
                 
                 f.write(
                     str(i) + ' \n' +
-                    item['original_text'] + #'\n' +
-                    #item['text'] + 
+                    item['original_text'] + '\n' +
+                    item['text'] + 
                     '\n\n')
